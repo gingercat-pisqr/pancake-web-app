@@ -8,7 +8,7 @@
         <title>Selamat Datang - Pancake</title>
 
         <!-- Ikon Kepala -->
-        <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,52 +28,52 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-white p-4">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="Beranda" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="Beranda" href="#Tentang">Tentang</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Produk
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm">
-                            <li><a class="dropdown-item" href="#Suplemen">Suplemen</a></li>
-                            <li><a class="dropdown-item" href="#Tentir">Tentir</a></li>
-                            <li><a class="dropdown-item" href="#Video">Video</a></li>
-                            <li><a class="dropdown-item" href="#Cheatsheets">Cheatsheets</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="Tim" href="#Tim">Tim</a>
-                    </li>
-                        
-                    @if (Route::has('login'))
-                        @auth
-                            <li class="nav-item">
-                                <a href="{{ url('/dashboard') }}" class="nav-link dark:text-gray-500">Dashboard</a>
-                            </li>
-                        @else
-                            <li class="nav-item nav-link">
-                                <a href="{{ route('login') }}" class="btn btn-primary dark:text-gray-500">Masuk</a>
-                            </li>
-
-                            @if (Route::has('register'))
-                                <li class="nav-item nav-link">
-                                    <a href="{{ route('register') }}" class="btn btn-outline-primary dark:text-gray-500 ">Daftar</a>
-                                </li>
-                            @endif
-                        @endauth
-                    @endif
-                </ul>
-            </div>
-        </div>
-
         <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-white p-4">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="Beranda" href="#">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="Beranda" href="#Tentang">Tentang</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Produk
+                            </a>
+                            <ul class="dropdown-menu border-0">
+                                <li><a class="dropdown-item" href="#Suplemen">Suplemen</a></li>
+                                <li><a class="dropdown-item" href="#Tentir">Tentir</a></li>
+                                <li><a class="dropdown-item" href="#Video">Video</a></li>
+                                <li><a class="dropdown-item" href="#Cheatsheets">Cheatsheets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="Tim" href="#Tim">Tim</a>
+                        </li>
+                            
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
+                                </li>
+                            @else
+                                <li class="nav-item nav-link">
+                                    <a href="{{ route('login') }}" class="btn btn-primary">Masuk</a>
+                                </li>
+
+                                @if (Route::has('register'))
+                                    <li class="nav-item nav-link">
+                                        <a href="{{ route('register') }}" class="btn btn-outline-primary">Daftar</a>
+                                    </li>
+                                @endif
+                            @endauth
+                        @endif
+                    </ul>
+                </div>
+            </div>
+
             <div class="container">
                 <a class="navbar-brand m-0 row" href="#">
                     <img src="{{ asset('images/icon/logo.svg') }}" class="col-auto" width="30px" height="30px"/>
@@ -205,7 +205,6 @@
                             
                                 <path d="M12 181C12 178.239 14.2386 176 17 176H74C76.7614 176 79 178.239 79 181C79 183.761 76.7614 186 74 186H17C14.2386 186 12 183.761 12 181Z" fill="#D9D9D9"/>
                             
-                            
                                 <path d="M12 194C12 191.239 14.2386 189 17 189H74C76.7614 189 79 191.239 79 194C79 196.761 76.7614 199 74 199H17C14.2386 199 12 196.761 12 194Z" fill="#D9D9D9"/>
                             
                                 <path d="M4 65C4 59.4772 8.47715 55 14 55H144C149.523 55 154 59.4772 154 65V85H4V65Z" fill="#1865F2"/>
@@ -227,7 +226,7 @@
                                         <feComposite in2="hardAlpha" operator="out"/>
                                         <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
                                         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_91_4"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_91_4" result="shape"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_91_4" result="shape"/>
                                     </filter>
                             
                                     <filter id="filter1_d_91_4" x="0" y="55" width="158" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -247,7 +246,8 @@
                 </div>
 
                 <div id='Tentir' class='row py-5'>
-                    <div class='col align-items-center flex justify-center' >
+                    <h3 class='text-center pb-5'><strong>Tentir</strong></h3>
+                    <div class='col-sm align-items-center flex justify-center' >
                         <svg width="236" height="211" viewBox="0 0 236 211" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_12_44)">
                                 <circle cx="118" cy="116" r="50" fill="#F0FF42"/>
@@ -349,8 +349,7 @@
                         </svg>
                     </div>
 
-                    <div class='col-lg' >
-                        <h3 class='text-center pb-5'><strong>Tentir</strong></h3>
+                    <div class='text-center col-sm py-4'>
                         <p class='text-center'>Tentir adalah program tutor sebaya yang dilaksanakan oleh dan untuk teman-teman angkatan.</p>
                     </div>
                 </div>
@@ -466,7 +465,7 @@
                         </svg>
                     </div>
                     
-                    <p class='text-center col-lg py-4'>Cheatsheet adalah rangkuman singkat per mata kuliah untuk membantu dalam review pelajaran dan membantu dalam ujian.</p>
+                    <p class='text-center col-sm py-4'>Cheatsheet adalah rangkuman singkat per mata kuliah untuk membantu dalam review pelajaran dan membantu dalam ujian.</p>
                 </div>
             </div>
 
@@ -474,6 +473,7 @@
                 <div class='container'>
                     <div class='row py-5'>
                         <h2 class='text-center'><strong>Tim</strong></h2>
+                        <p class='text-center'>Tim kami professional dan berpengalaman</p>
                     </div>
 
                     <div class="flex row justify-content-md-evenly">
@@ -607,7 +607,6 @@
                                     <div class="card-body">
                                         <h5 class="card-title text-center"><strong>Rakha Mulia</strong></h5>
                                         <p class="card-text text-center"><small class="text-muted"><i>Member of Suplemen Division</i></small></p>
-                                        <p class="card-text text-center"><small class="text-muted"><i>Fullstack Developer</i></small></p>
                                     </div>
                                 </div>
                             </div>
@@ -620,7 +619,7 @@
 
         <footer class='container py-5 text-black'>
             <div class='row justify-content-end'>
-                <div class='col-lg-auto mb-5'>
+                <div class='col-sm-auto mb-5'>
                     <p><strong>Tautan</strong></p>
                     <a href='#Beranda' class='text-black text-decoration-none'>Beranda</a>
                     <br/>
@@ -628,11 +627,11 @@
                     <br/>
                     <a href='#Kontak' class='text-black text-decoration-none'>Hubungi Kami</a>
                 </div>
-                <div class='col-lg-auto mb-5'>
+                <div class='col-sm-auto mb-5'>
                     <p><strong>Layanan</strong></p>
                     <a href='#Konsultasi' class='text-black text-decoration-none'>Konsultasi Akademik</a>
                 </div>
-                <div class='col-lg-auto mb-5'>
+                <div class='col-sm-auto mb-5'>
                     <p><strong>Media Sosial</strong></p>
                     <a href='#Tiktok' class='text-black text-decoration-none'><img/>Tiktok</a>
                     <br/>
@@ -647,7 +646,7 @@
             </div>
             <hr/>
             <div class='row flex-sm-row'>
-                <p class='col-lg-7'>© Hak Cipta, <strong><a href='#' class='text-decoration-none text-black'>Klay Studio</a></strong>.</p>
+                <p class='col-lg-7 m-0'>© Hak Cipta, <strong><a href='#' class='text-decoration-none text-black'>Klay Studio</a></strong>.</p>
                 <div class="align-items-end col-lg flex justify-content-between sm:float-right">
                     <a href='#' class='text-black underline'>Kebijakan Privasi</a>
                     <a href='#' class='text-black underline'>Kebijakan Kuki</a>
