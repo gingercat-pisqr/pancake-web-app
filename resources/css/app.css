@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (min-width: 600px) {
+    text-produk-center {
+        text-align:center;
+    }
+}
