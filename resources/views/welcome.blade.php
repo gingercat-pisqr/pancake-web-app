@@ -29,7 +29,7 @@
     </head>
     <body class="antialiased">
         <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-            <div class="collapse" id="navbarToggleExternalContent">
+            <div class="collapse show ms-" id="navbarToggleExternalContent">
                 <div class="bg-white p-4">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
@@ -607,6 +607,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title text-center"><strong>Rakha Mulia</strong></h5>
                                         <p class="card-text text-center"><small class="text-muted"><i>Member of Suplemen Division</i></small></p>
+                                        <a><img src=""/></a>
                                     </div>
                                 </div>
                             </div>

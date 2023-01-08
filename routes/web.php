@@ -40,25 +40,73 @@ Route::get('/suplemen',
     function() {
         return view('suplemen');
     }
-)->middleware(['auth', 'verified'])->name('suplemen');;
-
+)->middleware(['auth', 'verified'])->name('suplemen');
 
 Route::get('/tentir',
     function() {
         return view('tentir');
     }
-)->middleware(['auth', 'verified'])->name('tentir');;
+)->middleware(['auth', 'verified'])->name('tentir');
 
 Route::get('/video',
     function() {
         return view('video');
     }
-)->middleware(['auth', 'verified'])->name('video');;
+)->middleware(['auth', 'verified'])->name('video');
 
 Route::get('/cheatsheet',
     function() {
         return view('cheatsheets');
     }
-)->middleware(['auth', 'verified'])->name('cheatsheets');;
+)->middleware(['auth', 'verified'])->name('cheatsheets');
+
+// Mata Kuliah
+Route::get('/EkonomiMakro',
+    function() {
+        return view('matkul.ekonomimakro');
+    }
+)->middleware(['auth', 'verified'])->name('ekonomimakro');
+
+Route::get('/Perpajakan',
+    function() {
+        return view('matkul.perpajakan');
+    }
+)->middleware(['auth', 'verified'])->name('perpajakan');
+
+Route::get('/AkuntansiBiaya',
+    function() {
+        return view('matkul.akuntansibiaya');
+    }
+)->middleware(['auth', 'verified'])->name('akuntansibiaya');
+
+Route::get('/KeuanganPublik',
+    function() {
+        return view('matkul.keuanganpublik');
+    }
+)->middleware(['auth', 'verified'])->name('keuanganpublik');
+
+Route::get('/StatistikaTerapan',
+    function() {
+        return view('matkul.statistikaterapan');
+    }
+)->middleware(['auth', 'verified'])->name('statistikaterapan');
+
+Route::get('/ManajemenKeuangan',
+    function() {
+        return view('matkul.manajemenkeuangan');
+    }
+)->middleware(['auth', 'verified'])->name('manajemenkeuangan');
+
+Route::get('/PenganggaranSektorPublik',
+    function() {
+        return view('matkul.penganggaransektorpublik');
+    }
+)->middleware(['auth', 'verified'])->name('penganggaransektorpublik');
+
+Route::get('/ManajemenStrategi',
+    function() {
+        return view('matkul.manajemenstrategi');
+    }
+)->middleware(['auth', 'verified'])->name('manajemenstrategi');
 
 require __DIR__.'/auth.php';
